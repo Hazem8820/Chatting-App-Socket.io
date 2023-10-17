@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <!-- //////////////////////////////////////////////////////////////// Welcome Page ////////////////////////////////////////////////////////////// -->
+    <div id="name_div" class="vh-100 bg-dark bg-opacity-25">
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div class="m-2">
+                <input placeholder="Enter Your Name Here..." required id="input_name" type="text" class="form-control p-3">
+            </div>
+            <div class="m-2">
+                <button id="button_name" class="btn btn-primary  p-3">Submit</button>
+            </div>
+            <div id="redAlert" class="bg-danger text-white fw-bolder rounded-pill p-3 m-2 d-none"></div>
+        </div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// The App ////////////////////////////////////////////////////////////// -->
+    <div id="chat_div" class="d-none ">
+        <div class="person-selector m3">
+            <button class="button person-selector-button active-person mx-4" id="nameSelc"></button>
+        </div>
+        <div class="chat-container">
+            <h2 id="headTag" class="chat-header"></h2>
+
+            <div id="messageRow" class="chat-messages">
+
+            </div>
+
+            <form class="chat-input-form">
+                <input id="messageInput" type="text" class="chat-input" required placeholder="Type here, John..." />
+                <button id="messageButton" type="submit" class="button send-button">Send</button>
+            </form>
+            <button id="deleteButton" type="submit" class="button send-button bg-danger w-100 my-3">Clear All Messages</button>
+        </div>
+    </div>
+    <script src="./node_modules/socket.io-client/dist/socket.io.min.js"></script>
+    <script src="./JS/socket.io.js"></script>
+</body>
+
+</html>
